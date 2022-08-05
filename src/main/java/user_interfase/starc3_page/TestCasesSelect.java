@@ -1,0 +1,14 @@
+package user_interfase.starc3_page;
+
+import org.openqa.selenium.By;
+
+public class TestCasesSelect {
+
+    public static By SELECT_A_TEST_CASES = By.cssSelector( "select[ng-model='sc.selectedSuite']" );
+    public static By SAVE_BUTTON = By.xpath( "//button[text()='Save']" );
+    public static By RETIRAR_TARJETA_BOX = By.xpath("//b[text()='Retirar Tarjeta']");
+    public static By OPTIONS = By.xpath("//li[@name='Retirar Tarjeta']//child::span[@style='cursor:pointer']");
+    public static By TEST_VALUES_OPTIONS = By.cssSelector( "a[ng-click='openTestValues()']" );
+
+
+}
