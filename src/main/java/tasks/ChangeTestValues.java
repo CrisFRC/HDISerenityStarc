@@ -4,10 +4,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
-import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.actions.Scroll;
-import net.serenitybdd.screenplay.actions.Switch;
+import net.serenitybdd.screenplay.actions.*;
 import net.serenitybdd.screenplay.waits.Wait;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import user_interfase.starc3_page.TestValues;
@@ -48,9 +45,10 @@ public class ChangeTestValues implements Task {
     public <T extends Actor> void performAs(T actor) {
         String currentHandle = BrowseTheWeb.as(actor).getDriver().getWindowHandle();
         actor.attemptsTo(
-                Switch.toWindow("Test Values - Gooogle Chrome"),
-//                Switch.toWindow(getNewWindowHandle(actor,currentHandle)),
+//                Switch.toWindow("Test Values - Gooogle Chrome"),
+                Switch.toWindow(getNewWindowHandle(actor,currentHandle)),
                 WaitUntil.the(TXT_OCR,isClickable()),
+                DoubleClick.on(TXT_OCR),
                 Enter.theValue(id_string).into(TXT_OCR),
                 Click.on(SAVE_BUTTON)
         );

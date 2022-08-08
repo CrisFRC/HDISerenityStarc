@@ -9,6 +9,7 @@ import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.actions.Switch;
 import net.serenitybdd.screenplay.conditions.Check;
 import net.serenitybdd.screenplay.ui.Select;
+import net.serenitybdd.screenplay.waits.Wait;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import page.Starc3Home;
 import questions.OverViewData;
@@ -45,7 +46,7 @@ public class GoOverCases implements Task {
                     Check.whether(OverViewData.RetiraIsVisible())
                             .andIfSo(Scroll.to(RETIRAR_TARJETA_BOX),
                                     Click.on(OPTIONS),
-                                    WaitUntil.the(TEST_VALUES_OPTIONS,isClickable()),
+                                    WaitUntil.the(TEST_VALUES_OPTIONS,isVisible()),
                                     Click.on(TEST_VALUES_OPTIONS),
                                     ChangeTestValues.test(id_string))
             );
