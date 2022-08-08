@@ -32,7 +32,7 @@ public class GoOverScenery implements Task {
 
            actor.attemptsTo(
                 WaitUntil.the(SELECT_SCENARIO_LIST,isClickable()),
-                Click.on(SELECT_SCENARIO_LIST),
+//                Click.on(SELECT_SCENARIO_LIST),
                 Select.value(esc).from(SELECT_SCENARIO_LIST)
            );
 

@@ -5,6 +5,7 @@ package utils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import java.io.IOException;
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 public class GetList {
 
-    private WebDriver driver;
+
 
     public static List<List<String>>  sceneryList(String path) throws IOException {
 
@@ -34,7 +35,17 @@ public class GetList {
 
         }
 
+    /**
+     *
+     * Using Selenium in this part
+     * @param dropdownList = list web element
+     * @return number of options
+     */
+    public static  int getNumOptionsCases(By dropdownList){
 
+//        Select list = new Select(driver.findElement(dropdownList));
+        return 0;
+    }
 
 
 }
