@@ -16,5 +16,9 @@ public class OverViewData {
         return actor -> BrowseTheWeb.as(actor).find(RETIRAR_TARJETA_BOX).isCurrentlyVisible();
     }
 
+    public static Question<Boolean> OcrIsVisible(){
+        return actor -> BrowseTheWeb.as(actor).find(RETIRAR_TARJETA_BOX).isCurrentlyVisible();
+    }
+
 
 }

@@ -27,6 +27,9 @@ public class Starc3Home extends PageObject {
         return num;
     }
 
+    public void makeAWait() throws InterruptedException {
+        wait(1000);
+    }
 
 
 }

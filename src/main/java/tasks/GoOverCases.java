@@ -10,7 +10,9 @@ import net.serenitybdd.screenplay.actions.Switch;
 import net.serenitybdd.screenplay.conditions.Check;
 import net.serenitybdd.screenplay.ui.Select;
 import net.serenitybdd.screenplay.waits.Wait;
+import net.serenitybdd.screenplay.waits.WaitOnSupplier;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import net.serenitybdd.screenplay.waits.WaitWithTimeout;
 import page.Starc3Home;
 import questions.OverViewData;
 
