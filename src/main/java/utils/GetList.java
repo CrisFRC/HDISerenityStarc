@@ -1,22 +1,42 @@
 package utils;
 
-import net.serenitybdd.screenplay.actions.Click;
+
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
-
 public class GetList {
 
+    private WebDriver driver;
 
-    public static void sceneryList(List<String> list){
-        for(String str: list){
-            System.out.println("+++++++++++++++++++++++"+str);
+    public static List<List<String>>  sceneryList(String path) throws IOException {
+
+        List<List<String>> list = new ArrayList<List<String>>();
+        String numScenery = GetConfig.CONFIGS.getString("excel.totalScenery");
+        String sheetName = GetConfig.CONFIGS.getString("excel.sheetName");
+        int num = Integer.parseInt(numScenery);
+        String cellValue=" ";
+        for (int k =0; k <= 3;k++ ){
+            list.add(new ArrayList<String>());
+        }
+        for (int i = 1; i <= num; i++) {
+            for (int j = 0; j <= 3; j++) {
+                cellValue = ExcelRead.getCellValue(path, sheetName, i, j);
+                list.get(j).add(cellValue);
+                }
+            }
+        return list;
+
         }
 
 
-    }
+
 
 }
+
+

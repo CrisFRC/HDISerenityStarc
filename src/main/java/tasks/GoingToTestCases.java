@@ -34,8 +34,7 @@ public class GoingToTestCases implements Task {
                 Click.on(TEST_CASES_OPTION),
                 WaitUntil.the(SELECT_PROJECT_LIST,isClickable()),
                 Click.on(SELECT_PROJECT_LIST),
-                Click.on(SELECT_REQUIREMENT_LIST),
-                Click.on(SELECT_SCENARIO_LIST)
+                Click.on(SELECT_REQUIREMENT_LIST)
                 );
     }
 }
