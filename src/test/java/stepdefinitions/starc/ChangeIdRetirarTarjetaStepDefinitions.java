@@ -3,6 +3,7 @@ package stepdefinitions.starc;
 import io.cucumber.java.en.*;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import org.apache.commons.collections4.Get;
 import org.hamcrest.core.IsEqual;
 import org.junit.Before;
 import page.Starc3Home;
@@ -52,12 +53,14 @@ public class ChangeIdRetirarTarjetaStepDefinitions {
     public void user_change_id_of_withdraw_card_por_each_scenery_in(String path) throws IOException {
 
         List<List<String>> list = GetList.sceneryList(path);
+        String box = String.format(GetConfig.CONFIGS.getString("GENERAL.BOX"),"Retirar Tarjeta");
+        String options = String.format(GetConfig.CONFIGS.getString("OPTIONS.GENERAL"),"Retirar Tarjeta");
         for(int i = 0; i<= list.get(0).size()-1;i++) {
             if (list.get(2).get(i).equals("SI")) {
                 String id_change = String.format(GetConfig.CONFIGS.getString("OCR.txt"),list.get(3).get(i));
                 theActorInTheSpotlight().attemptsTo(
                         GoOverScenery.go(list.get(0).get(i)),
-                        GoOverCases.goCases(id_change)
+                        GoOverCases.goCases(id_change,box,options)
                 );
             }
         }
