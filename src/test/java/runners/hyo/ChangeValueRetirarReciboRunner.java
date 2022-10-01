@@ -1,4 +1,4 @@
-package runners;
+package runners.hyo;
 
 import io.cucumber.junit.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;

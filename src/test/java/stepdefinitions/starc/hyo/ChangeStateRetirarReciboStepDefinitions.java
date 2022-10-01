@@ -1,18 +1,13 @@
-package stepdefinitions.starc;
+package stepdefinitions.starc.hyo;
 
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
+
 import io.cucumber.java.en.When;
-import net.serenitybdd.screenplay.actors.OnStage;
-import net.serenitybdd.screenplay.actors.OnlineCast;
 import tasks.*;
 import utils.GetConfig;
 import utils.GetList;
-
 import java.io.IOException;
 import java.util.List;
 
-import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class ChangeStateRetirarReciboStepDefinitions {

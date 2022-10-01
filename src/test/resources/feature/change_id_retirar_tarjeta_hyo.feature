@@ -1,7 +1,7 @@
 Feature: Change id in test values of withdraw card to Hyosung's test cases
 
   @Hyowithpayments
-  Scenario Outline: Multifunctional HYO with payments
+  Scenario Outline: Multifunctional HYO with payments withdraw
     Given user is login on starc page
     And he select request <numR>  on test cases screen
     When user change id of withdraw card por each scenery in <excelPath>

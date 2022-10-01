@@ -43,7 +43,15 @@ public class ChangeTestValues implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-
+        String currentHandle = BrowseTheWeb.as(actor).getDriver().getWindowHandle();
+        actor.attemptsTo(
+//                Switch.toWindow("Test Values - Gooogle Chrome"),
+                Switch.toWindow(getNewWindowHandle(actor,currentHandle)),
+                WaitUntil.the(TXT_OCR,isClickable()),
+                DoubleClick.on(TXT_OCR),
+                Enter.theValue(id_string).into(TXT_OCR),
+                Click.on(SAVE_BUTTON)
+        );
 
         
 

@@ -1,4 +1,4 @@
-package stepdefinitions.starc;
+package stepdefinitions.starc.hyo;
 
 import io.cucumber.java.en.*;
 import net.serenitybdd.screenplay.actors.OnStage;

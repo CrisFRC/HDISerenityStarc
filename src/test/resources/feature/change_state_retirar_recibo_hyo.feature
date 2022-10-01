@@ -1,7 +1,7 @@
 Feature: Change value in test values of  box to Hyosung's test cases
 
   @RetirarRecibo
-  Scenario Outline: Multifunctional HYO with payments
+  Scenario Outline: Multifunctional HYO with payments print
     Given user is login on starc page
     And he select request <numR>  on test cases screen
     When user change value of print box por each scenery in <excelPath>

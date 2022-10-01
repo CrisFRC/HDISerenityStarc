@@ -8,7 +8,7 @@ public class TestCasesSelect {
     public static By SAVE_BUTTON = By.xpath( "//button[text()='Save']" );
 //    public static By RETIRAR_TARJETA_BOX = By.xpath("//b[text()='Retirar Tarjeta']");
 //    public static By RETIRAR_RECIBO_BOX = By.xpath("//b[text()='Retirar Recibo']");
-    public static By CONFIG_ROBOT_BOX = By.xpath("//b[text()='Iniciar Configuracion Robot']");
+//    public static By CONFIG_ROBOT_BOX = By.xpath("//b[text()='Iniciar Configuracion Robot']");
 
     public static By TEST_VALUES_OPTIONS = By.cssSelector( "a[ng-click='openTestValues()']" );
 
