@@ -13,7 +13,8 @@ public class OverViewData {
     }
 
     public static Question<Boolean> RetiraIsVisible(){
-        return actor -> BrowseTheWeb.as(actor).find(RETIRAR_TARJETA_BOX).isCurrentlyVisible();
+//        return actor -> BrowseTheWeb.as(actor).find(RETIRAR_TARJETA_BOX).isCurrentlyVisible();
+        return actor -> BrowseTheWeb.as(actor).find(RETIRAR_RECIBO_BOX).isCurrentlyVisible();
     }
 
     public static Question<Boolean> OcrIsVisible(){

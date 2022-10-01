@@ -29,7 +29,7 @@ public class GoOverScenery implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-
+        System.out.println("Objecto de esceneraio: ---------- "+ esc);
            actor.attemptsTo(
                 WaitUntil.the(SELECT_SCENARIO_LIST,isClickable()),
 //                Click.on(SELECT_SCENARIO_LIST),
