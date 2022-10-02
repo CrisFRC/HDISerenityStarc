@@ -14,6 +14,7 @@ import java.awt.*;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClickable;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 import static user_interfase.starc3_page.TestValues.*;
 import static user_interfase.starc3_page.TestValues.SAVE_BUTTON;
 
@@ -49,7 +50,7 @@ public class ChangeTestValues implements Task {
                 Switch.toWindow(getNewWindowHandle(actor,currentHandle)),
                 WaitUntil.the(TXT_OCR,isClickable()),
                 DoubleClick.on(TXT_OCR),
-                Enter.theValue(id_string).into(TXT_OCR),
+                Enter.theValue(id_string).into(TXT_OCR_INPUT),
                 Click.on(SAVE_BUTTON)
         );
 

@@ -54,7 +54,7 @@ public class GoOverCases implements Task {
                     WaitUntil.the(SELECT_A_TEST_CASES, isClickable()),
                     Click.on(SELECT_A_TEST_CASES),
                     Select.optionNumber(j).from(SELECT_A_TEST_CASES),
-                    //condicion de aparicion caja de retirar tarjeta
+                    //condicion de aparicion caja deseada
                     Check.whether(OverViewData.BoxIsVisible(GENERAL_BOX))
                             .andIfSo(Scroll.to(GENERAL_BOX), //COLOCAR EL XPATH DEL CUADRO QUE SE VA A MODIFICAR
                                     Click.on(OPTIONS),
